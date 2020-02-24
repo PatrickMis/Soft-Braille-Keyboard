@@ -32,7 +32,8 @@ To build the app you will need a few things.
 	
 	```cd /path/to/soft-braille-keyboard
 	android update project -p ./ --target <target_id> --library /path/to/brailleback/braille/service/
-	android update project -p ./ --target <target_id> --library /path/to/brailleback/braille/client/```
+	android update project -p ./ --target <target_id> --library /path/to/brailleback/braille/client/
+	```
 
 * ant debug
 
@@ -48,7 +49,8 @@ To build the app you will need a few things.
 		cd /path/to/brailleback/braille/service/jni/liblouiswrapper/liblouis/
 		patch -p 0 < /path/to/sbk/patches/tablechanges.patch
 		cd /path/to/brailleback
-		patch -p 0 < /path/to/sbk/patches/tablelist-brailleback.patch```
+		patch -p 0 < /path/to/sbk/patches/tablelist-brailleback.patch
+		```
 		
   Update the TranslatorClient:
 		
@@ -57,7 +59,8 @@ To build the app you will need a few things.
   And finally update the Braille service to use the newly included tables. If you make any changes to the liblouis tables or add additional tables you should do this last step:
 		
 		```cd braille/service
-		./tables/mktranslationtables```
+		./tables/mktranslationtables
+		```
 
 If this all works fine it is time to configure eclipse:
 
@@ -99,7 +102,8 @@ If this all works fine it is time to configure eclipse:
 
 - create the diffs:
 	```+ cd /path/to/brailleback
-	git diff braille/service/res/xml/tablelist.xml >/path/to/sbk/patches/tablelist-brailleback.patch```
+	git diff braille/service/res/xml/tablelist.xml >/path/to/sbk/patches/tablelist-brailleback.patch
+	```
 	
 	+ Copy the new table into the patches dir for now, so others can use it or otherwise get it included in liblouis and update the readme to include this like the pl-comp8 table.
 
