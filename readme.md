@@ -39,9 +39,9 @@ To build the app you will need a few things.
 
 * If this all goes fine you should do the following:
 
-	* Checkout latest liblouis somewhere else and copy the pl-pl-comp8.ctb file into the brailleback/braille/service/jni/liblouiswrapper/liblouis/tables/ directory.
+	- Checkout latest liblouis somewhere else and copy the pl-pl-comp8.ctb file into the brailleback/braille/service/jni/liblouiswrapper/liblouis/tables/ directory.
 
-	* Copy *.utb *.ctb to this same directory from sbk/patches:
+	- Copy *.utb *.ctb to this same directory from sbk/patches:
 
 		```cd /path/to/sbk_checkout
 		cp patches/*.utb /path/to/brailleback/braille/service/jni/liblouiswrapper/liblouis/tables/
@@ -52,15 +52,15 @@ To build the app you will need a few things.
 		patch -p 0 < /path/to/sbk/patches/tablelist-brailleback.patch
 		```
 
-  * Update the TranslatorClient:
+  # Update the TranslatorClient:
 
-		`patch -p 1 < /path/to/soft-braille-keyboard/patches/TranslatorClient.patch`
+			`patch -p 1 < /path/to/soft-braille-keyboard/patches/TranslatorClient.patch`
 
- 	* And finally update the Braille service to use the newly included tables. If you make any changes to the liblouis tables or add additional tables you should do this last step:
+ - And finally update the Braille service to use the newly included tables. If you make any changes to the liblouis tables or add additional tables you should do this last step:
 
-		```cd braille/service
-		./tables/mktranslationtables
-		```
+	```cd braille/service
+	./tables/mktranslationtables
+	```
 
 If this all works fine it is time to configure eclipse:
 
