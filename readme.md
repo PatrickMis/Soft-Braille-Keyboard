@@ -55,7 +55,7 @@ To build the app you will need a few things.
  		Update the TranslatorClient:
 
 		`patch -p 1 < /path/to/soft-braille-keyboard/patches/TranslatorClient.patch`
-
+		
  - And finally update the Braille service to use the newly included tables. If you make any changes to the liblouis tables or add additional tables you should do this last step:
 
 		```cd braille/service
