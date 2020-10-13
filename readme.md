@@ -1,6 +1,6 @@
-# Soft Braille Keyboard #
+# Soft Braille Keyboard
 
-## INTRODUCTION ##
+## INTRODUCTION
 
 This is an Android input method which displays a virtual on screen Braille keyboard for use by a blind person. This facilitates much faster and more comfortable input for the blind on Android with a variety of powerful editing commands and support for a number of different languages.
 
@@ -16,12 +16,12 @@ This application is licensed under the Apache License, Version 2.0 (the "License
 
 You can checkout sbk as follows:
 
-` git clone git@bitbucket.org:daniel_dalton10/soft-braille-keyboard.git `
+`git clone git@bitbucket.org:daniel_dalton10/soft-braille-keyboard.git`
 
 To build the app you will need a few things.
 
 * Checkout Android Brailleback
-	
+
 	`git clone http://github.com/google/brailleback`
 
 * See brailleback/README for setup instructions. Follow these and make sure you can at least ant build the service and client packages each. Don't worry if brailleback isn't building we do not use this.
@@ -38,26 +38,26 @@ To build the app you will need a few things.
 * ant debug
 
 * If this all goes fine you should do the following:
-	
+
 	* Checkout latest liblouis somewhere else and copy the pl-pl-comp8.ctb file into the brailleback/braille/service/jni/liblouiswrapper/liblouis/tables/ directory.
-	
+
 	* Copy *.utb *.ctb to this same directory from sbk/patches:
-		
-		```cd /path/to/sbk_checkout
-		cp patches/*.utb /path/to/brailleback/braille/service/jni/liblouiswrapper/liblouis/tables/
-		cp patches/*.ctb /path/to/brailleback/braille/service/jni/liblouiswrapper/liblouis/tables/
-		cd /path/to/brailleback/braille/service/jni/liblouiswrapper/liblouis/
-		patch -p 0 < /path/to/sbk/patches/tablechanges.patch
-		cd /path/to/brailleback
-		patch -p 0 < /path/to/sbk/patches/tablelist-brailleback.patch
-		```
-		
-  Update the TranslatorClient:
-		
+
+	```cd /path/to/sbk_checkout
+	cp patches/*.utb /path/to/brailleback/braille/service/jni/liblouiswrapper/liblouis/tables/
+	cp patches/*.ctb /path/to/brailleback/braille/service/jni/liblouiswrapper/liblouis/tables/
+	cd /path/to/brailleback/braille/service/jni/liblouiswrapper/liblouis/
+	patch -p 0 < /path/to/sbk/patches/tablechanges.patch
+	cd /path/to/brailleback
+	patch -p 0 < /path/to/sbk/patches/tablelist-brailleback.patch
+	```
+
+  * Update the TranslatorClient:
+
 		`patch -p 1 < /path/to/soft-braille-keyboard/patches/TranslatorClient.patch`
-		
-  And finally update the Braille service to use the newly included tables. If you make any changes to the liblouis tables or add additional tables you should do this last step:
-		
+
+ 	* And finally update the Braille service to use the newly included tables. If you make any changes to the liblouis tables or add additional tables you should do this last step:
+
 		```cd braille/service
 		./tables/mktranslationtables
 		```
