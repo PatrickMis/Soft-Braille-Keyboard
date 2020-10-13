@@ -52,7 +52,7 @@ To build the app you will need a few things.
 		patch -p 0 < /path/to/sbk/patches/tablelist-brailleback.patch
 		```
 
-  # Update the TranslatorClient:
+  	- Update the TranslatorClient:
 
 			`patch -p 1 < /path/to/soft-braille-keyboard/patches/TranslatorClient.patch`
 
