@@ -52,15 +52,15 @@ To build the app you will need a few things.
 		patch -p 0 < /path/to/sbk/patches/tablelist-brailleback.patch
 		```
 
-  	- Update the TranslatorClient:
+ 	Update the TranslatorClient:
 
-			`patch -p 1 < /path/to/soft-braille-keyboard/patches/TranslatorClient.patch`
+		`patch -p 1 < /path/to/soft-braille-keyboard/patches/TranslatorClient.patch`
 
  - And finally update the Braille service to use the newly included tables. If you make any changes to the liblouis tables or add additional tables you should do this last step:
 
-	```cd braille/service
-	./tables/mktranslationtables
-	```
+		```cd braille/service
+		./tables/mktranslationtables
+		```
 
 If this all works fine it is time to configure eclipse:
 
