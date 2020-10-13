@@ -30,7 +30,8 @@ To build the app you will need a few things.
 
 * Update the soft braille keyboard project.properties to use the right target and point to the required libraries:
 	
-	```cd /path/to/soft-braille-keyboard
+	```
+	cd /path/to/soft-braille-keyboard
 	android update project -p ./ --target <target_id> --library /path/to/brailleback/braille/service/
 	android update project -p ./ --target <target_id> --library /path/to/brailleback/braille/client/
 	```
@@ -43,7 +44,8 @@ To build the app you will need a few things.
 
 	- Copy *.utb *.ctb to this same directory from sbk/patches:
 
-		```cd /path/to/sbk_checkout
+		```
+		cd /path/to/sbk_checkout
 		cp patches/*.utb /path/to/brailleback/braille/service/jni/liblouiswrapper/liblouis/tables/
 		cp patches/*.ctb /path/to/brailleback/braille/service/jni/liblouiswrapper/liblouis/tables/
 		cd /path/to/brailleback/braille/service/jni/liblouiswrapper/liblouis/
@@ -58,7 +60,8 @@ To build the app you will need a few things.
 		
  - And finally update the Braille service to use the newly included tables. If you make any changes to the liblouis tables or add additional tables you should do this last step:
 
-	```cd braille/service
+	```
+	cd braille/service
 	./tables/mktranslationtables
 	```
 
