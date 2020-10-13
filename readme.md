@@ -43,14 +43,14 @@ To build the app you will need a few things.
 
 	* Copy *.utb *.ctb to this same directory from sbk/patches:
 
-	```cd /path/to/sbk_checkout
-	cp patches/*.utb /path/to/brailleback/braille/service/jni/liblouiswrapper/liblouis/tables/
-	cp patches/*.ctb /path/to/brailleback/braille/service/jni/liblouiswrapper/liblouis/tables/
-	cd /path/to/brailleback/braille/service/jni/liblouiswrapper/liblouis/
-	patch -p 0 < /path/to/sbk/patches/tablechanges.patch
-	cd /path/to/brailleback
-	patch -p 0 < /path/to/sbk/patches/tablelist-brailleback.patch
-	```
+		```cd /path/to/sbk_checkout
+		cp patches/*.utb /path/to/brailleback/braille/service/jni/liblouiswrapper/liblouis/tables/
+		cp patches/*.ctb /path/to/brailleback/braille/service/jni/liblouiswrapper/liblouis/tables/
+		cd /path/to/brailleback/braille/service/jni/liblouiswrapper/liblouis/
+		patch -p 0 < /path/to/sbk/patches/tablechanges.patch
+		cd /path/to/brailleback
+		patch -p 0 < /path/to/sbk/patches/tablelist-brailleback.patch
+		```
 
   * Update the TranslatorClient:
 
