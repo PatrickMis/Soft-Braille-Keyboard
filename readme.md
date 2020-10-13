@@ -58,9 +58,9 @@ To build the app you will need a few things.
 		
  - And finally update the Braille service to use the newly included tables. If you make any changes to the liblouis tables or add additional tables you should do this last step:
 
-		```cd braille/service
-		./tables/mktranslationtables
-		```
+	```cd braille/service
+	./tables/mktranslationtables
+	```
 
 If this all works fine it is time to configure eclipse:
 
